@@ -23,11 +23,8 @@ declare global {
   interface HTMLAttributes {}
 }
 
-import '@stencil/router';
+import '@stencil/redux';
 
-import {
-  MatchResults,
-} from '@stencil/router';
 
 declare global {
   interface HTMLAppHomeElement extends HTMLStencilElement {
@@ -57,33 +54,6 @@ declare global {
 
 
 declare global {
-  interface HTMLAppProfileElement extends HTMLStencilElement {
-    'match': MatchResults;
-  }
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
-  };
-  interface HTMLElementTagNameMap {
-    'app-profile': HTMLAppProfileElement;
-  }
-  interface ElementTagNameMap {
-    'app-profile': HTMLAppProfileElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      'app-profile': JSXElements.AppProfileAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface AppProfileAttributes extends HTMLAttributes {
-      'match'?: MatchResults;
-    }
-  }
-}
-
-
-declare global {
   interface HTMLMyAppElement extends HTMLStencilElement {
 
   }
@@ -104,6 +74,66 @@ declare global {
   }
   namespace JSXElements {
     export interface MyAppAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+  interface HTMLOledPixelElement extends HTMLStencilElement {
+    'color': string;
+    'size': number;
+    'x': number;
+    'y': number;
+  }
+  var HTMLOledPixelElement: {
+    prototype: HTMLOledPixelElement;
+    new (): HTMLOledPixelElement;
+  };
+  interface HTMLElementTagNameMap {
+    'oled-pixel': HTMLOledPixelElement;
+  }
+  interface ElementTagNameMap {
+    'oled-pixel': HTMLOledPixelElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'oled-pixel': JSXElements.OledPixelAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface OledPixelAttributes extends HTMLAttributes {
+      'color'?: string;
+      'size'?: number;
+      'x'?: number;
+      'y'?: number;
+    }
+  }
+}
+
+
+declare global {
+  interface HTMLOledScreenElement extends HTMLStencilElement {
+
+  }
+  var HTMLOledScreenElement: {
+    prototype: HTMLOledScreenElement;
+    new (): HTMLOledScreenElement;
+  };
+  interface HTMLElementTagNameMap {
+    'oled-screen': HTMLOledScreenElement;
+  }
+  interface ElementTagNameMap {
+    'oled-screen': HTMLOledScreenElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'oled-screen': JSXElements.OledScreenAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface OledScreenAttributes extends HTMLAttributes {
 
     }
   }

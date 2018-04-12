@@ -1,28 +1,28 @@
-import { Component } from '@stencil/core';
-
+import { Component, Prop } from '@stencil/core';
+import { Store } from '@stencil/redux';
+import { configureStore } from '../../store';
 
 @Component({
   tag: 'my-app',
   styleUrl: 'my-app.css'
 })
 export class MyApp {
+  @Prop({ context: 'store' }) store: Store;
+
+  componentWillLoad() {
+    this.store.setStore(configureStore({}));
+  }
 
   render() {
     return (
-      <div>
+      <div class="my-app">
         <header>
-          <h1>Stencil App Starter</h1>
+          <h1>Pixel Art with Stencil + Redux</h1>
+          <span class="flex"></span>
+          <a href="https://github.com/shprink/pixel-art-stencil-redux" target="_blank">Github</a>
         </header>
-
-        <main>
-          <stencil-router>
-            <stencil-route url='/' component='app-home' exact={true}>
-            </stencil-route>
-
-            <stencil-route url='/profile/:name' component='app-profile'>
-            </stencil-route>
-          </stencil-router>
-        </main>
+        <p><center>(Open Redux Devtools to see the state changes)</center></p>
+        <app-home></app-home>
       </div>
     );
   }
