@@ -3,8 +3,8 @@
   "fsNamespace": "app",
   "loader": "../app.js",
   "global": "app.global.js",
-  "core": "app.wec8trd7.js",
   "corePolyfilled": "app.zmpnofth.js",
+  "core": "app.wec8trd7.js",
   "components": {
     "app-home": {
       "$": "px6jbmoj"
