@@ -26,3 +26,7 @@ or
 ```
 npm start
 ```
+
+## thanks
+
+Found the pixels in this great article: https://css-tricks.com/fun-times-css-pixel-art/
